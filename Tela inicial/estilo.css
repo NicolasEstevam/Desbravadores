@@ -20,8 +20,8 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    height: 70vh;
-    margin: 100px;
+    min-height: 70vh;
+    margin: 20px;
     
 }
 
@@ -30,8 +30,8 @@ body {
     backdrop-filter: blur(10px); /* Desfoca o que está atrás */
     border-radius: 15px;
     box-shadow: 10px 10px 50px rgb(49, 19, 49);
-    margin: 0 100px 100px 100px;
-    width: 800px;
+    margin: 0 20px 20px 20px;
+    width: min(800px, 90%);
     padding: 20px;
 }
 
@@ -41,8 +41,8 @@ body {
     backdrop-filter: blur(10px); /* Desfoca o que está atrás */
     border-radius: 95px;
     box-shadow: 10px 10px 50px rgb(49, 19, 49);
-    margin: 0 100px;
-    width: 400px;
+    margin: 0 20px;
+    width: min(400px, 90%);
     padding: 20px;
 }
 
@@ -79,4 +79,37 @@ a {
     text-decoration: none;
     color: wheat;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+@media (max-width: 768px) {
+    .pai {
+        flex-direction: column;
+        margin: 20px;
+        height: auto;
+    }
+
+    .esquerda, .direita {
+        width: 90%;
+        margin: 15px 0;
+        padding: 15px;
+    }
+
+    .direita {
+        border-radius: 30px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    button {
+        width: 100%;
+        max-width: 300px;
+        height: 60px;
+        font-size: 20px;
+    }
 }
